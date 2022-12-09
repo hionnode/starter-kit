@@ -1,0 +1,46 @@
+{
+    "web": {
+        "port": "80",
+        "ip": "0.0.0.0"
+    },
+    "fastify": {
+        "disableRequestLogging": true
+    },
+    "swagger": {
+        "enabled": true
+    },
+    "logger": {
+        "enabled": true,
+        "level": "info",
+        "name": "sample-app",
+        "prettyPrint": false
+    },
+    "metrics": {
+        "enabled": false,
+        "endpoint": "/metrics",
+        "blacklist": [
+            "/healthz",
+            "/metrics"
+        ]
+    },
+    "telemetry": {
+        "enabled": true,
+        "serviceName": "fastify-typescript-boilerplate",
+        "wrapRoutes": true,
+        "ignoreRoutes": [
+            "/healthz",
+            "/metrics",
+            "/favicon.ico"
+        ]
+    },
+    "pgsql": {
+        "enabled": false,
+        "database": "sample-app",
+        "user": "*******",
+        "password": "*******",
+        "host": "localhost",
+        "port": 5432,
+        "poolSize": 10,
+        "ssl": true
+    }
+}
